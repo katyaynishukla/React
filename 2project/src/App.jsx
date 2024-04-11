@@ -1,0 +1,27 @@
+import { useState } from 'react'
+import './App.css'
+
+function App() {
+
+  const [counter, setCounter] = useState(15)
+
+  const addValue = () =>{
+    setCounter(counter+1)
+  }
+
+  const decreaseValue = () =>{
+    setCounter(counter - 1)
+  }
+
+  return (
+    <>
+      <h1>Heyoo {counter}</h1>
+      <h2>Counter value: {counter}</h2>
+      <button onClick={addValue}>Add val </button>{' '}
+      <button onClick={decreaseValue}>Remove val </button>
+      <p>Footer: {counter}</p>
+    </>
+  )
+}
+
+export default App
